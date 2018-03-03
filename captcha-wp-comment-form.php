@@ -4,7 +4,7 @@
 Plugin Name: Coinhive Captcha for WordPress Comments
 Plugin URI: https://blanboom.org/2018/coinhive-captcha
 Description: 发表评论时，使用 Coinhive 验证码进行验证
-Version: 1.1
+Version: 1.2
 Author: Blanboom
 Author URI: http://blanboom.org
 License: GPL2
@@ -33,7 +33,7 @@ class Captcha_Comment_Form {
 	public function __construct() {
 
 		$this->public_key  = '1Egl6gZ5ifNkxgpHDFuwtT5eifXFoPYg';
-		$this->private_key = 'YOUR_PRIVATE_KEY!!!!!!!!!!!!!!!!!!!!!!';
+		$this->private_key = '!!!!!!!!!!!!!!!!!!!!!!YOUR_PRIVATE_KEY!!!!!!!!!!!!!!!!!!!!!!';
 
 		// adds the captcha to the comment form
 		add_action( 'comment_form', array( $this, 'captcha_display' ) );
@@ -59,13 +59,17 @@ class Captcha_Comment_Form {
 		 <style type='text/css'>#submit {
 			display: none;
 		}</style>
-		 单击“Verify me”进行身份验证（<u><a href="https://blanboom.org/2018/coinhive-captcha">了解更多</a></u>）
+		 单击“Verify me”，身份验证后即可提交评论（<u><a href="https://blanboom.org/2018/coinhive-captcha" target="_blank">了解更多</a></u>）
 		<script src="https://authedmine.com/lib/captcha.min.js" async></script>
-		<div class="coinhive-captcha" data-hashes="1024" data-key="$this->public_key" data-hashes="1024">
+		<script>
+			function captchaCallback(token) {
+				document.getElementById('submit').style.display='inline'
+		}
+		</script>
+		<div class="coinhive-captcha" data-key="$this->public_key" data-hashes="1024" data-callback="captchaCallback">
 			<em>验证码加载中......<br>
 			如果验证码无法加载，请关闭广告过滤软件，或打开浏览器中的 JavaScript</em>
 		</div>
-		<input name="submit" type="submit" id="submit-alt" class="submit" tabindex="6" style="margin-top: 0px; margin-bottom: 2.5em;" value="提交评论"/>
 CAPTCHA_FORM;
 	}
 
