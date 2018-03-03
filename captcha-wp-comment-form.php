@@ -59,7 +59,7 @@ class Captcha_Comment_Form {
 		 <style type='text/css'>#submit {
 			display: none;
 		}</style>
-		 单击“Verify me”，身份验证后即可提交评论（<u><a href="https://blanboom.org/2018/coinhive-captcha" target="_blank">了解更多</a></u>）
+		 单击“Verify me”，验证后即可评论（<u><a href="https://blanboom.org/2018/coinhive-captcha" target="_blank">了解更多</a></u>）
 		<script src="https://authedmine.com/lib/captcha.min.js" async></script>
 		<script>
 			function captchaCallback(token) {
