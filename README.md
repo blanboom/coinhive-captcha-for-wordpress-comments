@@ -2,6 +2,8 @@
 
 发表评论时，使用 Coinhive PoW 验证码进行验证，从而避免垃圾评论并获取 XMR.
 
+<br>
+
 **详细介绍**：
 
 https://blanboom.org/2018/coinhive-captcha
