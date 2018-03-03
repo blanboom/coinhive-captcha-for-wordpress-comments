@@ -26,7 +26,7 @@ https://coinhive.com/#captcha
 
 **致谢**：
 
-插件基于 [Agbonghama Collins](https://w3guy.com) 的 [Add reCAPTCHA to comment form](https://github.com/collizo4sky/Add-reCAPTCHA-to-comment-form/blob/master/captcha-wp-comment-form.php) 修改而来，原插件信息如下：
+插件基于 [Agbonghama Collins](https://w3guy.com) 的 [Add reCAPTCHA to comment form](https://github.com/collizo4sky/Add-reCAPTCHA-to-comment-form/blob/master/captcha-wp-comment-form.php) ，原插件信息如下：
 
 ```
 /* 
